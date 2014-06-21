@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vanilla CSS Gallery - With styling</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/vanilla-css-gallery.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="prism/prism.css">
+</head>
+<body>
+
+	<div class="gallery-item" id="1">
+		<img src="http://placeimg.com/800/600/tech" alt="Tech image" />
+	</div>
+	<div class="gallery-item" id="2">
+		<img src="http://placeimg.com/800/600/nature" alt="Nature image" />
+	</div>
+	<div class="gallery-item" id="3">
+		<img src="http://placeimg.com/800/600/arch" alt="Architecture image" />
+	</div>
+
+	<h2>Vanilla CSS Gallery - With styling</h2>
+	<p><em>Example of the CSS-only image gallery with some additional styles.</em></p>
+	<p><a href="basic.html">View example without styling</a> - <a href="https://github.com/jelmerdemaat/vanilla-css-gallery">View on GitHub</a> - By <a href="https://twitter.com/jelmerdemaat">@jelmerdemaat</a></p>
+	<hr>
+	<p>Click the images to use the slideshow:</p>
+	<ul class="gallery-nav">
+		<li>
+			<a href="#1">
+				<img src="http://placehold.it/100x70&text=First" alt="Tech image" />
+			</a>
+		</li>
+		<li>
+			<a href="#2">
+				<img src="http://placehold.it/100x70&text=Second" alt="Nature image" />
+			</a>
+		</li>
+		<li>
+			<a href="#3">
+				<img src="http://placehold.it/100x70&text=Third" alt="Architecture image" />
+			</a>
+		</li>
+		<li class="gallery-close">
+			<a href="#deselect">&times;</a></li>
+		<li>
+	</ul>
+	<hr>
+
+		<h3>Additional CSS</h3>
+		<p>No prefixes included.</p>
+		<pre><code class="language-css">.gallery-nav {
+  border-radius: 5px;
+}
+
+.gallery-item {
+  background: black;
+  background: rgba(0, 0, 0, 0.85);
+  transition: all 0.2s ease-out;
+}
+
+.gallery-item img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.gallery-item:target ~ .gallery-nav {
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  position: fixed;
+}
+
+.gallery-item:target ~ .gallery-nav li {
+  margin: 0 5px 0 0;
+}
+
+.gallery-item:target ~ .gallery-nav img {
+  border: 2px solid white;
+}
+
+.gallery-item:target ~ .gallery-nav .gallery-close {
+  font-size: 20px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  left: 105%;
+  top: 0;
+}
+
+.gallery-item img {
+  margin: auto;
+  border: 4px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery-close a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+img {
+  vertical-align: top;
+}
+</code></pre>
+
+<script src="prism/prism.js"></script>
+</body>
+</html>
