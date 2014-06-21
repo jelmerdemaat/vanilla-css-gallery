@@ -1,4 +1,4 @@
-vanilla-css-gallery
+Vanilla CSS Gallery
 ===================
 
-A lightweight, pure CSS photo gallery
+A lightweight, pure CSS photo gallery.

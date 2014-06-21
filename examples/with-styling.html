@@ -2,56 +2,54 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Vanilla CSS Gallery - Basic</title>
+	<title>Vanilla CSS Gallery - With styling</title>
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="vanilla-css-gallery.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="prism/prism.css">
 </head>
 <body>
 
 	<div class="gallery-item" id="1">
-		<img src="http://placehold.it/800x600&text=First+image" alt="Tech image">
+		<img src="http://placeimg.com/800/600/tech" alt="Tech image" />
 	</div>
 	<div class="gallery-item" id="2">
-		<img src="http://placehold.it/800x600&text=Second+image" alt="Nature image">
+		<img src="http://placeimg.com/800/600/nature" alt="Nature image" />
 	</div>
 	<div class="gallery-item" id="3">
-		<img src="http://placehold.it/800x600&text=Third+image" alt="Architecture image">
+		<img src="http://placeimg.com/800/600/arch" alt="Architecture image" />
 	</div>
 
-	<h2>Vanilla CSS Gallery - Basic</h2>
-	<p><em>Example of the CSS-only image gallery without any styling. These are the bare basics.</em></p>
+	<h2>Vanilla CSS Gallery - With styling</h2>
+	<p><em>Example of the CSS-only image gallery with some additional styles.</em></p>
 	<p><a href="https://github.com/jelmerdemaat/vanilla-css-gallery">View on GitHub</a> - By <a href="https://twitter.com/jelmerdemaat">@jelmerdemaat</a></p>
-
 	<hr>
-
 	<p>Click the images to use the slideshow:</p>
-
 	<ul class="gallery-nav">
 		<li>
 			<a href="#1">
-				<img src="http://placehold.it/100x70&text=First" alt="Tech image">
+				<img src="http://placehold.it/100x70&text=First" alt="Tech image" />
 			</a>
 		</li>
 		<li>
 			<a href="#2">
-				<img src="http://placehold.it/100x70&text=Second" alt="Nature image">
+				<img src="http://placehold.it/100x70&text=Second" alt="Nature image" />
 			</a>
 		</li>
 		<li>
 			<a href="#3">
-				<img src="http://placehold.it/100x70&text=Third" alt="Architecture image">
+				<img src="http://placehold.it/100x70&text=Third" alt="Architecture image" />
 			</a>
 		</li>
 		<li class="gallery-close">
-			<a href="#deselect" title="Close gallery">&times;</a></li>
+			<a href="#deselect">&times;</a></li>
 		<li>
 	</ul>
 
 	<hr>
 
-	<h3>Necessary CSS</h3>
-	<pre><code class="language-css">.gallery-nav {
+		<h3>Necessary CSS</h3>
+		<pre><code class="language-css">.gallery-nav {
   position: relative;
 }
 
@@ -83,7 +81,7 @@
   display: block;
 }</code></pre>
 
-	<h3>Necessary HTML</h3>
+		<h3>Necessary HTML</h3>
 <pre><code class="language-markup">&lt;div class=&quot;gallery-item&quot; id=&quot;1&quot;&gt;
 	&lt;img src=&quot;your/image/source-large.jpg&quot; alt=&quot;Tech image&quot;&gt;
 &lt;/div&gt;
@@ -93,6 +91,7 @@
 &lt;div class=&quot;gallery-item&quot; id=&quot;3&quot;&gt;
 	&lt;img src=&quot;your/image/source-large.jpg&quot; alt=&quot;Architecture image&quot;&gt;
 &lt;/div&gt;
+
 &lt;ul class=&quot;gallery-nav&quot;&gt;
 	&lt;li&gt;
 		&lt;a href=&quot;#1&quot;&gt;
@@ -113,6 +112,7 @@
 		&lt;a href=&quot;#deselect&quot; title=&quot;Close gallery&quot;&gt;&amp;times;&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;
 &lt;/ul&gt;</code></pre>
+
 <script src="prism/prism.js"></script>
 </body>
 </html>
