@@ -13,7 +13,7 @@ gulp.task('styles', function() {
 						debugInfo: false
 					}))
 					.pipe(autoprefixer('last 3 versions'))
-					.pipe(gulp.dest('examples/'));
+					.pipe(gulp.dest('examples/css/'));
 });
 
 gulp.task('watch', function() {

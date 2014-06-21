@@ -1,13 +1,9 @@
 /*!
  * NOTE
- * Example styles of what you could create with this gallery.
+ * Extra example styles of what you could create with this gallery.
  */
 .gallery-nav {
   border-radius: 5px;
-}
-
-.gallery-close {
-  display: none;
 }
 
 .gallery-item {
@@ -30,7 +26,7 @@
   position: fixed;
 }
 .gallery-item:target ~ .gallery-nav li {
-  margin: 0;
+  margin: 0 5px 0 0;
 }
 .gallery-item:target ~ .gallery-nav img {
   border: 2px solid white;

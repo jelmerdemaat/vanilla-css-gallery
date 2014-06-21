@@ -1,6 +1,6 @@
 /*!
  * NOTE
- * This file (base.sass) contains the minimum CSS
+ * This file (base.sass) contains only the minimum gallery CSS
  * necessary for just the basic functionality.
  */
 .gallery-nav {
@@ -30,26 +30,4 @@
 }
 .gallery-item:target ~ .gallery-nav .gallery-close {
   display: block;
-}
-
-/*!
- * NOTE
- * The following CSS does not influence the gallery functionality.
- * It just makes the example prettier.
- */
-body {
-  padding: 10vw;
-}
-
-img {
-  max-width: 100%;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
 }

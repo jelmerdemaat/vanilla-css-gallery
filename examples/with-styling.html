@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Vanilla CSS Gallery - With styling</title>
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="vanilla-css-gallery.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/vanilla-css-gallery.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="prism/prism.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
 
 	<h2>Vanilla CSS Gallery - With styling</h2>
 	<p><em>Example of the CSS-only image gallery with some additional styles.</em></p>
-	<p><a href="https://github.com/jelmerdemaat/vanilla-css-gallery">View on GitHub</a> - By <a href="https://twitter.com/jelmerdemaat">@jelmerdemaat</a></p>
+	<p><a href="basic.html">View example without styling</a> - <a href="https://github.com/jelmerdemaat/vanilla-css-gallery">View on GitHub</a> - By <a href="https://twitter.com/jelmerdemaat">@jelmerdemaat</a></p>
 	<hr>
 	<p>Click the images to use the slideshow:</p>
 	<ul class="gallery-nav">
@@ -45,73 +45,71 @@
 			<a href="#deselect">&times;</a></li>
 		<li>
 	</ul>
-
 	<hr>
 
-		<h3>Necessary CSS</h3>
+		<h3>Additional CSS</h3>
+		<p>No prefixes included.</p>
 		<pre><code class="language-css">.gallery-nav {
-  position: relative;
+  border-radius: 5px;
 }
 
 .gallery-item {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
+  background: black;
+  background: rgba(0, 0, 0, 0.85);
+  transition: all 0.2s ease-out;
 }
 
-.gallery-close {
-  display: none;
-}
-
-.gallery-item:target {
-  opacity: 1;
-  position: fixed;
-  z-index: 2;
+.gallery-item img {
+  max-width: 90vw;
+  max-height: 90vh;
 }
 
 .gallery-item:target ~ .gallery-nav {
-  z-index: 3;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  position: fixed;
+}
+
+.gallery-item:target ~ .gallery-nav li {
+  margin: 0 5px 0 0;
+}
+
+.gallery-item:target ~ .gallery-nav img {
+  border: 2px solid white;
 }
 
 .gallery-item:target ~ .gallery-nav .gallery-close {
+  font-size: 20px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 3px;
   display: block;
-}</code></pre>
+  position: absolute;
+  left: 105%;
+  top: 0;
+}
 
-		<h3>Necessary HTML</h3>
-<pre><code class="language-markup">&lt;div class=&quot;gallery-item&quot; id=&quot;1&quot;&gt;
-	&lt;img src=&quot;your/image/source-large.jpg&quot; alt=&quot;Tech image&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;gallery-item&quot; id=&quot;2&quot;&gt;
-	&lt;img src=&quot;your/image/source-large.jpg&quot; alt=&quot;Nature image&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;gallery-item&quot; id=&quot;3&quot;&gt;
-	&lt;img src=&quot;your/image/source-large.jpg&quot; alt=&quot;Architecture image&quot;&gt;
-&lt;/div&gt;
+.gallery-item img {
+  margin: auto;
+  border: 4px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-&lt;ul class=&quot;gallery-nav&quot;&gt;
-	&lt;li&gt;
-		&lt;a href=&quot;#1&quot;&gt;
-			&lt;img src=&quot;your/image/source-small.jpg&quot; alt=&quot;Tech image&quot;&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-	&lt;li&gt;
-		&lt;a href=&quot;#2&quot;&gt;
-			&lt;img src=&quot;your/image/source-small.jpg&quot; alt=&quot;Nature image&quot;&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-	&lt;li&gt;
-		&lt;a href=&quot;#3&quot;&gt;
-			&lt;img src=&quot;your/image/source-small.jpg&quot; alt=&quot;Architecture image&quot;&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-	&lt;li class=&quot;gallery-close&quot;&gt;
-		&lt;a href=&quot;#deselect&quot; title=&quot;Close gallery&quot;&gt;&amp;times;&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;
-&lt;/ul&gt;</code></pre>
+.gallery-close a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+img {
+  vertical-align: top;
+}
+</code></pre>
 
 <script src="prism/prism.js"></script>
 </body>
