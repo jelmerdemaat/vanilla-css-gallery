@@ -3,5 +3,8 @@ bower_components/
 *.log
 .sublime-*
 
-build/
-dist/
+
+# SASS cache
+.sass-cache/
+*.scssc
+*.sassc
