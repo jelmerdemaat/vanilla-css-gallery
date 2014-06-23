@@ -1,6 +1,6 @@
 {
   "name": "Vanilla-CSS-Gallery",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "devDependencies": {
     "gulp": "^3.8.1",
     "gulp-autoprefixer": "0.0.7",

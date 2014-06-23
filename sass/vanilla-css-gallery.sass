@@ -9,6 +9,7 @@
   position: relative
 
 .gallery-close
+  // Hide closing cross initially
   display: none
 
 .gallery-item
@@ -26,7 +27,7 @@
     opacity: 1
     z-index: 2
 
-    // Make the original image list the gallery navigation
+    // Make the original image list also the gallery navigation
     & ~ .gallery-nav
       z-index: 3
 
