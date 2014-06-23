@@ -3,10 +3,118 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Vanilla CSS Gallery</title>
-	<link rel="stylesheet" href="examples/css/normalize.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/site.css">
+	<link rel="stylesheet" href="css/vanilla-css-gallery.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<h1>Vanilla CSS Gallery</h1>
+	<p>A simple image gallery made purely out of CSS. No JavaScript. Suitable for when you need a really simple and lightweight solution.</p>
+	<hr>
+
+	<h2>Example (with styling)</h2>
+	<p>Click the images to interact with the gallery.</p>
+
+	<div class="with-styles">
+		<div class="gallery-item" id="1">
+			<img src="http://placeimg.com/800/600/tech" alt="Tech image" />
+		</div>
+		<div class="gallery-item" id="2">
+			<img src="http://placeimg.com/800/600/nature" alt="Nature image" />
+		</div>
+		<div class="gallery-item" id="3">
+			<img src="http://placeimg.com/800/600/arch" alt="Architecture image" />
+		</div>
+
+		<ul class="gallery-nav">
+			<li>
+				<a href="#1">
+					<img src="http://placehold.it/100x70&text=First" alt="Tech image" />
+				</a>
+			</li>
+			<li>
+				<a href="#2">
+					<img src="http://placehold.it/100x70&text=Second" alt="Nature image" />
+				</a>
+			</li>
+			<li>
+				<a href="#3">
+					<img src="http://placehold.it/100x70&text=Third" alt="Architecture image" />
+				</a>
+			</li>
+			<li class="gallery-close">
+				<a href="#deselect">&times;</a></li>
+			<li>
+		</ul>
+	</div>
+
+	<h2>Example (without styling)</h2>
+
+	<div class="gallery-item" id="4">
+		<img src="http://placeimg.com/800/600/tech" alt="Tech image" />
+	</div>
+	<div class="gallery-item" id="5">
+		<img src="http://placeimg.com/800/600/nature" alt="Nature image" />
+	</div>
+	<div class="gallery-item" id="6">
+		<img src="http://placeimg.com/800/600/arch" alt="Architecture image" />
+	</div>
+
+	<ul class="gallery-nav">
+		<li>
+			<a href="#4">
+				<img src="http://placehold.it/100x70&text=First" alt="Tech image" />
+			</a>
+		</li>
+		<li>
+			<a href="#5">
+				<img src="http://placehold.it/100x70&text=Second" alt="Nature image" />
+			</a>
+		</li>
+		<li>
+			<a href="#6">
+				<img src="http://placehold.it/100x70&text=Third" alt="Architecture image" />
+			</a>
+		</li>
+		<li class="gallery-close">
+			<a href="#deselect">&times;</a></li>
+		<li>
+	</ul>
+	<br>
+	<hr>
+
+	<h2>Necessary CSS</h2>
+<pre><code class="language-css">.gallery-nav {
+  position: relative;
+}
+
+.gallery-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.gallery-close {
+  display: none;
+}
+
+.gallery-item:target {
+  opacity: 1;
+  position: fixed;
+  z-index: 2;
+}
+
+.gallery-item:target ~ .gallery-nav {
+  z-index: 3;
+}
+
+.gallery-item:target ~ .gallery-nav .gallery-close {
+  display: block;
+}</code></pre>
 </body>
 </html>
