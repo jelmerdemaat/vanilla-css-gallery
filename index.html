@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Vanilla CSS Gallery</title>
+	<meta type="description">Vanilla CSS Gallery: a lightweight CSS only image gallery</meta>
 	<link rel="stylesheet" href="css/vendor/normalize.css">
 	<link rel="stylesheet" href="css/vanilla-css-gallery.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -11,42 +12,46 @@
 <body>
 	<h1>Vanilla CSS Gallery</h1>
 	<p>A simple image gallery made purely out of CSS. No JavaScript. Suitable for when you need a really simple and lightweight solution.</p>
+	<p><a href="https://github.com/jelmerdemaat/vanilla-css-gallery">View on GitHub</a> - By <a href="https://twitter.com/jelmerdemaat">@jelmerdemaat</a> - <a target="_blank" href="https://twitter.com/share?url=http:%2F%2Fjelmerdemaat.github.io%2Fvanilla-css-gallery&via=jelmerdemaat&related=jelmerdemaat&text=Vanilla+CSS+Gallery:+a+lightweight,+CSS+only+image+gallery">Share on Twitter</a></p>
+
 	<hr>
 
 	<h2>Example (with styling)</h2>
 	<p>Click the images to interact with the gallery.</p>
 
 	<div class="with-styles">
+
 		<div class="gallery-item" id="1">
 			<img src="images/beach.jpg" alt="A nice image of a beach" />
 		</div>
 		<div class="gallery-item" id="2">
-			<img src="images/mountains.jpg" alt="A nice image of mountains" />
+			<img src="images/coffee.jpg" alt="A nice image of coffee" />
 		</div>
 		<div class="gallery-item" id="3">
-			<img src="images/coffee.jpg" alt="A nice image of steaming coffee" />
+			<img src="images/mountains.jpg" alt="A nice image of mountains" />
 		</div>
 
 		<ul class="gallery-nav">
 			<li>
 				<a href="#1">
-					<img src="http://placehold.it/100x70&text=First" alt="Tech image" />
+					<img src="images/beach.jpg" alt="A nice beach image" />
 				</a>
 			</li>
 			<li>
 				<a href="#2">
-					<img src="http://placehold.it/100x70&text=Second" alt="Nature image" />
+					<img src="images/coffee.jpg" alt="A nice coffee image" />
 				</a>
 			</li>
 			<li>
 				<a href="#3">
-					<img src="http://placehold.it/100x70&text=Third" alt="Architecture image" />
+					<img src="images/mountains.jpg" alt="A nice mountains image" />
 				</a>
 			</li>
 			<li class="gallery-close">
 				<a href="#deselect">&times;</a></li>
 			<li>
 		</ul>
+
 	</div>
 
 	<h2>Example (without styling)</h2>
@@ -55,26 +60,26 @@
 		<img src="images/beach.jpg" alt="A nice image of a beach" />
 	</div>
 	<div class="gallery-item" id="5">
-		<img src="images/mountains.jpg" alt="A nice image of mountains" />
+		<img src="images/coffee.jpg" alt="A nice image of coffee" />
 	</div>
 	<div class="gallery-item" id="6">
-		<img src="images/coffee.jpg" alt="A nice image of steaming coffee" />
+		<img src="images/mountains.jpg" alt="A nice image of mountains" />
 	</div>
 
 	<ul class="gallery-nav">
 		<li>
 			<a href="#4">
-				<img src="http://placehold.it/100x70&text=First" alt="Tech image" />
+				<img src="images/beach.jpg" alt="A nice beach image" />
 			</a>
 		</li>
 		<li>
 			<a href="#5">
-				<img src="http://placehold.it/100x70&text=Second" alt="Nature image" />
+				<img src="images/coffee.jpg" alt="A nice coffee image" />
 			</a>
 		</li>
 		<li>
 			<a href="#6">
-				<img src="http://placehold.it/100x70&text=Third" alt="Architecture image" />
+				<img src="images/mountains.jpg" alt="A nice mountains image" />
 			</a>
 		</li>
 		<li class="gallery-close">
@@ -84,7 +89,7 @@
 	<br>
 	<hr>
 
-	<h2>Necessary CSS</h2>
+	<h3>Necessary CSS</h3>
 	<p>Core functionality.</p>
 <pre><code class="language-css">.gallery-nav {
   position: relative;
@@ -171,6 +176,40 @@
 img {
   vertical-align: top;
 }
+</code></pre>
+
+	<h3>Markup structure</h3>
+<pre><code class="language-markup">
+&lt;div class=&quot;gallery-item&quot; id=&quot;1&quot;&gt;
+	&lt;img src=&quot;images/beach.jpg&quot; alt=&quot;A nice image of a beach&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gallery-item&quot; id=&quot;2&quot;&gt;
+	&lt;img src=&quot;images/coffee.jpg&quot; alt=&quot;A nice image of coffee&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gallery-item&quot; id=&quot;3&quot;&gt;
+	&lt;img src=&quot;images/mountains.jpg&quot; alt=&quot;A nice image of mountains&quot; /&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;gallery-nav&quot;&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;#1&quot;&gt;
+			&lt;img src=&quot;images/beach.jpg&quot; alt=&quot;A nice beach image&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;#2&quot;&gt;
+			&lt;img src=&quot;images/coffee.jpg&quot; alt=&quot;A nice coffee image&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;#3&quot;&gt;
+			&lt;img src=&quot;images/mountains.jpg&quot; alt=&quot;A nice mountains image&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;gallery-close&quot;&gt;
+		&lt;a href=&quot;#deselect&quot;&gt;&amp;times;&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;
+&lt;/ul&gt;
 </code></pre>
 <script src="prism/prism.js"></script>
 </body>
