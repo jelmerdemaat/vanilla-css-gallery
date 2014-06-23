@@ -1,22 +1,19 @@
 /*!
  * NOTE
- * Extra example styles of what you could create with this gallery.
+ * These are extra example styles of what
+ * you could create with this gallery.
  */
-.with-styles .gallery-nav {
-  border-radius: 5px;
-}
-
-.with-styles .gallery-item {
+.gallery-item {
   background: black;
   background: rgba(0, 0, 0, 0.85);
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
-.with-styles .gallery-item img {
+.gallery-item img {
   max-width: 90vw;
   max-height: 90vh;
 }
-.with-styles .gallery-item:target ~ .gallery-nav {
+.gallery-item:target ~ .gallery-nav {
   top: 25px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -25,13 +22,13 @@
   text-align: center;
   position: fixed;
 }
-.with-styles .gallery-item:target ~ .gallery-nav li {
+.gallery-item:target ~ .gallery-nav li {
   margin: 0 5px 0 0;
 }
-.with-styles .gallery-item:target ~ .gallery-nav img {
+.gallery-item:target ~ .gallery-nav img {
   border: 2px solid white;
 }
-.with-styles .gallery-item:target ~ .gallery-nav .gallery-close {
+.gallery-item:target ~ .gallery-nav .gallery-close {
   font-size: 20px;
   font-weight: bold;
   background: rgba(0, 0, 0, 0.85);
@@ -41,7 +38,7 @@
   left: 105%;
   top: 0;
 }
-.with-styles .gallery-item img {
+.gallery-item img {
   margin: auto;
   border: 4px solid white;
   position: absolute;
@@ -52,7 +49,7 @@
   transform: translate(-50%, -50%);
 }
 
-.with-styles .gallery-close a {
+.gallery-close a {
   color: white;
   text-decoration: none;
   padding: 5px;

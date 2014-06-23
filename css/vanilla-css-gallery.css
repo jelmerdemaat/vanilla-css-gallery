@@ -1,6 +1,6 @@
 /*!
  * NOTE
- * This file (base.sass) contains only the minimum gallery CSS
+ * This file contains only the minimum gallery CSS
  * necessary for just the basic functionality.
  */
 .gallery-nav {
@@ -12,7 +12,7 @@
 }
 
 .gallery-item {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -22,7 +22,6 @@
 }
 .gallery-item:target {
   opacity: 1;
-  position: fixed;
   z-index: 2;
 }
 .gallery-item:target ~ .gallery-nav {
