@@ -85,12 +85,17 @@
 	<hr>
 
 	<h2>Necessary CSS</h2>
+	<p>Core functionality.</p>
 <pre><code class="language-css">.gallery-nav {
   position: relative;
 }
 
+.gallery-close {
+  display: none;
+}
+
 .gallery-item {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -98,37 +103,24 @@
   opacity: 0;
   z-index: -1;
 }
-
-.gallery-close {
-  display: none;
-}
-
 .gallery-item:target {
   opacity: 1;
-  position: fixed;
   z-index: 2;
 }
-
 .gallery-item:target ~ .gallery-nav {
   z-index: 3;
 }
-
 .gallery-item:target ~ .gallery-nav .gallery-close {
   display: block;
 }</code></pre>
 
 		<h3>Additional CSS</h3>
-		<p>No prefixes included.</p>
-		<pre><code class="language-css">.gallery-nav {
-  border-radius: 5px;
-}
-
-.gallery-item {
+		<p>An example for more pretty styling. No prefixes included.</p>
+		<pre><code class="language-css">.gallery-item {
   background: black;
   background: rgba(0, 0, 0, 0.85);
-  transition: all 0.2s ease-out;
+  transition: opacity 0.3s ease-out;
 }
-
 .gallery-item img {
   max-width: 90vw;
   max-height: 90vh;
