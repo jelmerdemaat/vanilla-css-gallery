@@ -2,4 +2,4 @@
  * NOTE
  * This file contains only the minimum gallery CSS
  * necessary for just the basic functionality.
- */.gallery-nav{position:relative}.gallery-close{display:none}.gallery-item{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;z-index:-1}.gallery-item:target{opacity:1;z-index:2}.gallery-item:target~.gallery-nav{z-index:3}.gallery-item:target~.gallery-nav .gallery-close{display:block}
+ */.gallery-nav{position:relative}.gallery-nav img{max-width:150px}.gallery-close{display:none}.gallery-item{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;z-index:-1}.gallery-item:target{opacity:1;z-index:2}.gallery-item:target~.gallery-nav{z-index:3}.gallery-item:target~.gallery-nav .gallery-close{display:block}

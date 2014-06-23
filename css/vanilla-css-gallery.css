@@ -6,6 +6,9 @@
 .gallery-nav {
   position: relative;
 }
+.gallery-nav img {
+  max-width: 150px;
+}
 
 .gallery-close {
   display: none;
