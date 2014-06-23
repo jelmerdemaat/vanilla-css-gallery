@@ -9,8 +9,8 @@
 .gallery-item {
   background: black;
   background: rgba(0, 0, 0, 0.85);
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 .gallery-item img {
   max-width: 90vw;

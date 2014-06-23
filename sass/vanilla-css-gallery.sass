@@ -13,7 +13,7 @@
 
 .gallery-item
   // Define the initial state
-  position: absolute
+  position: fixed
   top: 0
   right: 0
   bottom: 0
@@ -24,7 +24,6 @@
   // When the image is active
   &:target
     opacity: 1
-    position: fixed
     z-index: 2
 
     // Make the original image list the gallery navigation
