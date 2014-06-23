@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Vanilla CSS Gallery - With styling</title>
 	<link rel="stylesheet" href="../css/vendor/normalize.css">
-	<link rel="stylesheet" href="../css/vanilla-css-gallery.css">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/vanilla-css-gallery.min.css">
+	<link rel="stylesheet" href="../css/style.min.css">
 </head>
 <body>
 
@@ -44,70 +44,6 @@
 			<a href="#deselect">&times;</a></li>
 		<li>
 	</ul>
-
-		<h3>Additional CSS</h3>
-		<p>No prefixes included.</p>
-		<pre><code class="language-css">.gallery-nav {
-  border-radius: 5px;
-}
-
-.gallery-item {
-  background: black;
-  background: rgba(0, 0, 0, 0.85);
-  transition: all 0.2s ease-out;
-}
-
-.gallery-item img {
-  max-width: 90vw;
-  max-height: 90vh;
-}
-
-.gallery-item:target ~ .gallery-nav {
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  position: fixed;
-}
-
-.gallery-item:target ~ .gallery-nav li {
-  margin: 0 5px 0 0;
-}
-
-.gallery-item:target ~ .gallery-nav img {
-  border: 2px solid white;
-}
-
-.gallery-item:target ~ .gallery-nav .gallery-close {
-  font-size: 20px;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 3px;
-  display: block;
-  position: absolute;
-  left: 105%;
-  top: 0;
-}
-
-.gallery-item img {
-  margin: auto;
-  border: 4px solid white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.gallery-close a {
-  color: white;
-  text-decoration: none;
-  padding: 5px;
-}
-
-img {
-  vertical-align: top;
-}
-</code></pre>
 
 </body>
 </html>

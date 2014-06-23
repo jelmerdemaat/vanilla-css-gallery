@@ -1,9 +1,15 @@
 var gulp = require('gulp'),
+
+		// CSS
+		minifyCSS = require('gulp-minify-css'),
 		sass = require('gulp-ruby-sass'),
-		autoprefixer = require('gulp-autoprefixer');
+		autoprefixer = require('gulp-autoprefixer'),
+
+		// OTHER
+		rename = require('gulp-rename');
 
 gulp.task('default', function() {
-	gulp.start('styles');
+	gulp.start('styles','minify');
 });
 
 gulp.task('styles', function() {
@@ -16,6 +22,20 @@ gulp.task('styles', function() {
 					.pipe(gulp.dest('css/'));
 });
 
+gulp.task('minify', function() {
+	return gulp.src([
+		'css/vanilla-css-gallery.css',
+		'css/style.css'
+	])
+		.pipe(minifyCSS({
+			keepSpecialComments: 1
+		}))
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('css/'));
+});
+
 gulp.task('watch', function() {
-	gulp.watch(['sass/**/*.sass','sass/**/*.scss'], ['styles']);
+	gulp.watch(['sass/**/*.sass','sass/**/*.scss'], ['default']);
 });
