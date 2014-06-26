@@ -7,12 +7,9 @@
   /* To be able to have a z-index: */
   position: relative;
 }
-.gallery-nav img {
-  max-width: 150px;
-}
 
 .gallery-close {
-  /* Hide closing cross initially: */
+  /* Hide closing "x" initially: */
   display: none;
 }
 
@@ -27,7 +24,7 @@
   z-index: -1;
 }
 .gallery-item:target {
-  /* When the image is active: */
+  /* When the image is active, make it appear: */
   opacity: 1;
   z-index: 2;
 }

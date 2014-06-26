@@ -8,11 +8,8 @@
   /* To be able to have a z-index: */
   position: relative
 
-  img
-    max-width: 150px
-
 .gallery-close
-  /* Hide closing cross initially: */
+  /* Hide closing "x" initially: */
   display: none
 
 .gallery-item
@@ -26,7 +23,7 @@
   z-index: -1
 
   &:target
-    /* When the image is active: */
+    /* When the image is active, make it appear: */
     opacity: 1
     z-index: 2
 

@@ -1,10 +1,10 @@
 Vanilla CSS Gallery
 ===================
 
-A lightweight, pure CSS photo gallery. By using the `:target` pseudo class images are selected and displayed in a larger view. The original `ul` list of images becomes the gallery navigation.
+A lightweight, pure CSS photo gallery. By using the `:target` pseudo class the images are selected and displayed in the large view. The original `ul` list of images becomes the gallery navigation.
 
 ## How to use it
-Use the following CSS and HTML to create the gallery. *This doesn't include styling*: only functionality. The code is also present in SASS and CSS in this repo.
+Use the following CSS and HTML to create the gallery. *This doesn't include styling*: only functionality. The code is also present in /sass and /css in this repo.
 
 ### CSS
 ```css
@@ -14,7 +14,7 @@ Use the following CSS and HTML to create the gallery. *This doesn't include styl
 }
 
 .gallery-close {
-  /* Hide closing cross initially: */
+  /* Hide closing "x" initially: */
   display: none;
 }
 
@@ -29,8 +29,8 @@ Use the following CSS and HTML to create the gallery. *This doesn't include styl
   z-index: -1;
 }
 
-/* When the image is active: */
 .gallery-item:target {
+  /* When the image is active, make it appear: */
   opacity: 1;
   z-index: 2;
 }
