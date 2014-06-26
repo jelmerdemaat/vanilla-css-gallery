@@ -25,9 +25,9 @@
   left: 0;
   opacity: 0;
   z-index: -1;
-  /* When the image is active: */
 }
 .gallery-item:target {
+  /* When the image is active: */
   opacity: 1;
   z-index: 2;
 }
