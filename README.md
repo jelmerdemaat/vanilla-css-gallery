@@ -3,6 +3,10 @@ Vanilla CSS Gallery
 
 A lightweight, pure CSS photo gallery. By using the `:target` pseudo class the images are selected and displayed in the large view. The original `ul` list of images becomes the gallery navigation.
 
+## Examples
+See [jelmerdemaat.github.io/vanilla-css-gallery](http://jelmerdemaat.github.io/vanilla-css-gallery/) for some live examples. These xamples are also included in the repo (do some fancy `git clone git@github.com:jelmerdemaat/vanilla-css-gallery.git` and stuff).
+
+
 ## How to use it
 Use the following CSS and HTML to create the gallery. *This doesn't include styling*: only functionality. The code is also present in /sass and /css in this repo.
 
