@@ -4,6 +4,7 @@
  * necessary for just the basic functionality.
  */
 .gallery-nav {
+  /* To be able to have a z-index: */
   position: relative;
 }
 .gallery-nav img {
@@ -11,10 +12,12 @@
 }
 
 .gallery-close {
+  /* Hide closing cross initially: */
   display: none;
 }
 
 .gallery-item {
+  /* Define the initial state: */
   position: fixed;
   top: 0;
   right: 0;
@@ -22,12 +25,14 @@
   left: 0;
   opacity: 0;
   z-index: -1;
+  /* When the image is active: */
 }
 .gallery-item:target {
   opacity: 1;
   z-index: 2;
 }
 .gallery-item:target ~ .gallery-nav {
+  /* Make the original image list also the gallery navigation: */
   z-index: 3;
 }
 .gallery-item:target ~ .gallery-nav .gallery-close {
