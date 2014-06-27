@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Vanilla CSS Gallery</title>
-	<meta name="description" content="Vanilla CSS Gallery: a lightweight CSS-only image gallery">
+	<meta name="description" content="Vanilla CSS Gallery: a lightweight, CSS-only image gallery">
 	<meta name="keywords" content="css gallery, css only, image gallery, photo gallery, pure css gallery">
 	<link rel="stylesheet" href="css/vendor/normalize.css">
 	<link rel="stylesheet" href="css/vanilla-css-gallery.min.css">
@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="prism/prism.css">
 </head>
 <body>
+
 	<h1>Vanilla CSS Gallery</h1>
 	<p>A simple image gallery made purely out of CSS. No JavaScript. Suitable for when you need a really simple and lightweight solution.</p>
 	<p><a href="https://github.com/jelmerdemaat/vanilla-css-gallery">View on GitHub</a> - By <a href="https://twitter.com/jelmerdemaat">@jelmerdemaat</a> - <a target="_blank" href="https://twitter.com/share?url=http:%2F%2Fjelmerdemaat.github.io%2Fvanilla-css-gallery&via=jelmerdemaat&related=jelmerdemaat&text=Vanilla+CSS+Gallery:+a+lightweight,+CSS-only+image+gallery">Share on Twitter</a></p>
@@ -109,13 +110,16 @@
   opacity: 0;
   z-index: -1;
 }
+
 .gallery-item:target {
   opacity: 1;
   z-index: 2;
 }
+
 .gallery-item:target ~ .gallery-nav {
   z-index: 3;
 }
+
 .gallery-item:target ~ .gallery-nav .gallery-close {
   display: block;
 }</code></pre>
@@ -127,6 +131,7 @@
   background: rgba(0, 0, 0, 0.85);
   transition: opacity 0.3s ease-out;
 }
+
 .gallery-item img {
   max-width: 90vw;
   max-height: 90vh;
@@ -212,6 +217,8 @@ img {
 	&lt;li&gt;
 &lt;/ul&gt;
 </code></pre>
-<script src="prism/prism.js"></script>
+
+	<script src="prism/prism.js"></script>
+
 </body>
 </html>

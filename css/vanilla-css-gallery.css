@@ -9,11 +9,9 @@
 .gallery-nav img {
   max-width: 150px;
 }
-
 .gallery-close {
   display: none;
 }
-
 .gallery-item {
   position: fixed;
   top: 0;
