@@ -1,13 +1,13 @@
 Vanilla CSS Gallery
 ===================
 
-A lightweight, pure CSS photo gallery. By using the `:target` pseudo class the images are selected and displayed in the large view. The original `ul` list of images becomes the gallery navigation.
+A lightweight, pure CSS photo gallery. By using the `:target` pseudo-class the images are selected and displayed in the large view. The original `ul` list of images becomes the gallery navigation.
 
  * [Examples](#examples)
  * [How to use it](#how-to-use-it)
  * [Browser support](#browser-support)
 
-By [@jelmerdemaat](https://twitter.com/jelmerdemaat "Me on Twitter") - <a href="https://twitter.com/share?url=http:%2F%2Fjelmerdemaat.github.io%2Fvanilla-css-gallery&via=jelmerdemaat&related=jelmerdemaat&text=Vanilla+CSS+Gallery:+a+lightweight,+CSS-only+image+gallery" target="_blank">Tweet it</a>
+I'm [@jelmerdemaat](https://twitter.com/jelmerdemaat) on Twitter.
 
 ## Examples
 See [jelmerdemaat.github.io/vanilla-css-gallery](http://jelmerdemaat.github.io/vanilla-css-gallery/) for some live examples. These examples are also included in the repo (do some fancy `git clone git@github.com:jelmerdemaat/vanilla-css-gallery.git` and stuff).
@@ -57,6 +57,11 @@ Use the following CSS and HTML to create the gallery. *This doesn't include styl
 ```
 
 ### HTML
+The HTML must include:
+
+ * A series of `.gallery-item`s with anything inside.
+ * A `.gallery-nav` navigation list *on the same level as the `.gallery-item`s*. Can include thumbnails of the images.
+ * A closing link as the ultimate list item. The `href` can be anything non-existent.
 
 ```html
 <!-- Big images -->
@@ -96,23 +101,6 @@ Use the following CSS and HTML to create the gallery. *This doesn't include styl
 
 ## Browser support
 
-To be completed.
+Core functionality supported in every browser that supports the `:target` pseudo-class. This browserstack screenshot list of `:target` selected `div`s goes back to good support in IE7: [screenshots](http://www.browserstack.com/screenshots/27b100cbdc38933ea61792d27f428aca92a84bef).
 
-<table>
-	<tr>
-		<td>Chrome</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Firefox</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>IE</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Opera</td>
-		<td></td>
-	</tr>
-</table>
+The styling example relies somewhat on `transform: translate()` to perfectly center the images, so support for those styles goes back to [IE9, excluding Opera Mini](http://beta.caniuse.com/#feat=transforms2d). Another design would be perfectly possible without transforms to establish support down to, say, IE7.
