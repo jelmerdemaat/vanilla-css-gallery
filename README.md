@@ -1,7 +1,7 @@
 Vanilla CSS Gallery
 ===================
 
-A lightweight, pure CSS photo gallery. By using the `:target` pseudo-class the images are selected and displayed in the large view. The original `ul` list of images becomes the gallery navigation.
+A lightweight, pure CSS photo gallery. No JavaScript. By using the `:target` pseudo-class the images are selected and displayed in the large view. The original `ul` list of images becomes the gallery navigation.
 
  * [Examples](#examples)
  * [How to use it](#how-to-use-it)
