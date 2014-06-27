@@ -94,14 +94,17 @@
 	<h3>Necessary CSS</h3>
 	<p>Core functionality.</p>
 <pre><code class="language-css">.gallery-nav {
+  /* To be able to have a z-index: */
   position: relative;
 }
 
 .gallery-close {
+  /* Hide closing "x" initially: */
   display: none;
 }
 
 .gallery-item {
+  /* Define the initial state: */
   position: fixed;
   top: 0;
   right: 0;
@@ -112,17 +115,20 @@
 }
 
 .gallery-item:target {
+  /* When the image is active, make it appear: */
   opacity: 1;
   z-index: 2;
 }
 
 .gallery-item:target ~ .gallery-nav {
+  /* Make the original image list also the gallery navigation: */
   z-index: 3;
 }
 
 .gallery-item:target ~ .gallery-nav .gallery-close {
   display: block;
-}</code></pre>
+}
+</code></pre>
 
 		<h3>Additional CSS</h3>
 		<p>An example for more pretty styling. No prefixes included.</p>
